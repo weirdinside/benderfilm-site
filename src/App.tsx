@@ -1,0 +1,59 @@
+import { useContext } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
+import styles from "./App.module.css";
+import About from "./components/About/About";
+import Logo from "./components/Logo/Logo";
+import MenuItem from "./components/Menu/MenuItem/MenuItem";
+import Roster from "./components/Roster/Roster";
+import AboutLogo from "./components/ScrambledText/AboutLogo";
+import ContactLogo from "./components/ScrambledText/ContactLogo";
+import RosterLogo from "./components/ScrambledText/RosterLogo";
+import { ThemeContext } from "./contexts/ThemeProvider";
+import Contact from "./components/Contact/Contact";
+function App() {
+  const { isDarkMode, toggleColorMode } = useContext(ThemeContext);
+  const location = useLocation();
+
+  const navigation = [
+    { name: "home", link: "/" },
+    { name: "roster", link: "/roster" },
+    { name: "about", link: "/about" },
+    { name: "contact", link: "/contact" },
+  ];
+
+  return (
+    <div className={`${styles["page"]} ${isDarkMode && styles["dark"]}`}>
+      <div
+        onClick={() => {
+          toggleColorMode();
+        }}
+        className={`${styles["theme__toggle"]} ${isDarkMode && styles["dark"]}`}
+      />
+      <div className={styles["page__content"]}>
+        <header className={styles["header"]}>
+          {location.pathname === "/roster" && <RosterLogo />}
+          {location.pathname === "/about" && <AboutLogo />}
+          {location.pathname === "/contact" && <ContactLogo />}
+          {navigation
+            .filter((item) => {
+              return item.link !== location.pathname;
+            })
+            .map((item) => {
+              return <MenuItem name={item.name} link={item.link} />;
+            })}
+        </header>
+        <main className={styles["main"]}>
+          <Routes>
+            <Route path="*" element={<Logo />} />
+            <Route path="roster" element={<Roster />} />
+            <Route path="about" element={<About />} />
+            <Route path="contact" element={<Contact />} />
+          </Routes>
+        </main>
+        <footer className={styles["footer"]}></footer>
+      </div>
+    </div>
+  );
+}
+
+export default App;

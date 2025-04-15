@@ -1,0 +1,505 @@
+@keyframes b {
+  0% {
+    scale: 0;
+    transform: translateX(20%) translateY(-20%);
+    animation-timing-function: linear(
+      0,
+      0.162 3.6%,
+      1.018 12.8%,
+      1.235 18.4%,
+      1.219 22.4%,
+      1.005 32%,
+      0.944 38%,
+      1.013 57.2%,
+      1
+    );
+  }
+
+  100% {
+    scale: 1;
+    transform: translateX(0%) translateY(0);
+  }
+}
+
+.logo.light{
+  filter: invert(1);
+}
+
+.noise{
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  user-select: none;
+}
+
+.mousearea {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  clip-path: ellipse(44% 28% at 50% 50%);
+  z-index: 30;
+}
+
+.logo-container {
+  position: relative;
+  aspect-ratio: 2220 / 1812;
+  max-height: 80%;
+  display: flex;
+  max-width: 1000px;
+  width: 100%;
+
+}
+
+.logo {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  user-select: none;
+  transition: translate 0.5s
+      linear(
+        0,
+        0.162 3.6%,
+        1.018 12.8%,
+        1.235 18.4%,
+        1.219 22.4%,
+        1.005 32%,
+        0.944 38%,
+        1.013 57.2%,
+        1
+      ),
+    opacity 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  scale: 0;
+  opacity: 1;
+  z-index: 3;
+}
+
+.logo.film {
+  opacity: 0;
+  scale: 0.8;
+  z-index: 1;
+  transform: translateY(20%);
+  transition: 0.1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.logo.b {
+  animation: b 0.5s
+    linear(
+      0,
+      0.003 0.4%,
+      0.012 0.9%,
+      0.026 1.4%,
+      0.049 2%,
+      0.109 3.3%,
+      0.311 7.2%,
+      0.409 9.3%,
+      0.463 10.6%,
+      0.513 11.9%,
+      0.562 13.3%,
+      0.606 14.7%,
+      0.651 16.3%,
+      0.691 17.9%,
+      0.729 19.6%,
+      0.762 21.3%,
+      0.792 23.1%,
+      0.82 25%,
+      0.846 27%,
+      0.868 29.1%,
+      0.889 31.3%,
+      0.907 33.6%,
+      0.923 36.1%,
+      0.937 38.7%,
+      0.949 41.5%,
+      0.959 44.5%,
+      0.968 47.8%,
+      0.976 51.3%,
+      0.987 59.1%,
+      0.994 68.8%,
+      0.998 81.4%,
+      1
+    )
+    0s forwards;
+}
+
+@keyframes e1 {
+  0% {
+    scale: 0;
+    transform: translateX(20%) translateY(-2%);
+  }
+
+  100% {
+    scale: 1;
+    transform: translateX(0%) translateY(0%);
+  }
+}
+
+.logo.e1 {
+  animation: e1 0.5s
+    linear(
+      0,
+      0.003 0.4%,
+      0.012 0.9%,
+      0.026 1.4%,
+      0.049 2%,
+      0.109 3.3%,
+      0.311 7.2%,
+      0.409 9.3%,
+      0.463 10.6%,
+      0.513 11.9%,
+      0.562 13.3%,
+      0.606 14.7%,
+      0.651 16.3%,
+      0.691 17.9%,
+      0.729 19.6%,
+      0.762 21.3%,
+      0.792 23.1%,
+      0.82 25%,
+      0.846 27%,
+      0.868 29.1%,
+      0.889 31.3%,
+      0.907 33.6%,
+      0.923 36.1%,
+      0.937 38.7%,
+      0.949 41.5%,
+      0.959 44.5%,
+      0.968 47.8%,
+      0.976 51.3%,
+      0.987 59.1%,
+      0.994 68.8%,
+      0.998 81.4%,
+      1
+    )
+    0.12s forwards;
+}
+
+.logo.n {
+  animation: b 0.5s
+    linear(
+      0,
+      0.003 0.4%,
+      0.012 0.9%,
+      0.026 1.4%,
+      0.049 2%,
+      0.109 3.3%,
+      0.311 7.2%,
+      0.409 9.3%,
+      0.463 10.6%,
+      0.513 11.9%,
+      0.562 13.3%,
+      0.606 14.7%,
+      0.651 16.3%,
+      0.691 17.9%,
+      0.729 19.6%,
+      0.762 21.3%,
+      0.792 23.1%,
+      0.82 25%,
+      0.846 27%,
+      0.868 29.1%,
+      0.889 31.3%,
+      0.907 33.6%,
+      0.923 36.1%,
+      0.937 38.7%,
+      0.949 41.5%,
+      0.959 44.5%,
+      0.968 47.8%,
+      0.976 51.3%,
+      0.987 59.1%,
+      0.994 68.8%,
+      0.998 81.4%,
+      1
+    )
+    0.24s forwards;
+}
+
+.logo.d {
+  animation: b 0.5s
+    linear(
+      0,
+      0.003 0.4%,
+      0.012 0.9%,
+      0.026 1.4%,
+      0.049 2%,
+      0.109 3.3%,
+      0.311 7.2%,
+      0.409 9.3%,
+      0.463 10.6%,
+      0.513 11.9%,
+      0.562 13.3%,
+      0.606 14.7%,
+      0.651 16.3%,
+      0.691 17.9%,
+      0.729 19.6%,
+      0.762 21.3%,
+      0.792 23.1%,
+      0.82 25%,
+      0.846 27%,
+      0.868 29.1%,
+      0.889 31.3%,
+      0.907 33.6%,
+      0.923 36.1%,
+      0.937 38.7%,
+      0.949 41.5%,
+      0.959 44.5%,
+      0.968 47.8%,
+      0.976 51.3%,
+      0.987 59.1%,
+      0.994 68.8%,
+      0.998 81.4%,
+      1
+    )
+    0.36s forwards;
+}
+
+.logo.e2 {
+  animation: b 0.5s
+    linear(
+      0,
+      0.003 0.4%,
+      0.012 0.9%,
+      0.026 1.4%,
+      0.049 2%,
+      0.109 3.3%,
+      0.311 7.2%,
+      0.409 9.3%,
+      0.463 10.6%,
+      0.513 11.9%,
+      0.562 13.3%,
+      0.606 14.7%,
+      0.651 16.3%,
+      0.691 17.9%,
+      0.729 19.6%,
+      0.762 21.3%,
+      0.792 23.1%,
+      0.82 25%,
+      0.846 27%,
+      0.868 29.1%,
+      0.889 31.3%,
+      0.907 33.6%,
+      0.923 36.1%,
+      0.937 38.7%,
+      0.949 41.5%,
+      0.959 44.5%,
+      0.968 47.8%,
+      0.976 51.3%,
+      0.987 59.1%,
+      0.994 68.8%,
+      0.998 81.4%,
+      1
+    )
+    0.48s forwards;
+}
+
+.logo.r {
+  animation: e1 0.5s
+    linear(
+      0,
+      0.003 0.4%,
+      0.012 0.9%,
+      0.026 1.4%,
+      0.049 2%,
+      0.109 3.3%,
+      0.311 7.2%,
+      0.409 9.3%,
+      0.463 10.6%,
+      0.513 11.9%,
+      0.562 13.3%,
+      0.606 14.7%,
+      0.651 16.3%,
+      0.691 17.9%,
+      0.729 19.6%,
+      0.762 21.3%,
+      0.792 23.1%,
+      0.82 25%,
+      0.846 27%,
+      0.868 29.1%,
+      0.889 31.3%,
+      0.907 33.6%,
+      0.923 36.1%,
+      0.937 38.7%,
+      0.949 41.5%,
+      0.959 44.5%,
+      0.968 47.8%,
+      0.976 51.3%,
+      0.987 59.1%,
+      0.994 68.8%,
+      0.998 81.4%,
+      1
+    )
+    0.6s forwards;
+}
+
+@keyframes streak1 {
+  from {
+    clip-path: polygon(0 0, 100% 0%, 22% 18%, 0% 100%);
+  }
+
+  to {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+.logo.s1 {
+  clip-path: polygon(0 0, 100% 0%, 22% 18%, 0% 100%);
+  animation: streak1 0.7s ease 0.6s forwards;
+  scale: 1;
+}
+
+@keyframes streak2 {
+  from {
+    clip-path: polygon(0 0, 4% 97%, 100% 100%, 0% 100%);
+  }
+
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+.logo.s2 {
+  clip-path: polygon(0 0, 4% 97%, 100% 100%, 0% 100%);
+  animation: streak2 0.7s ease 0.75s forwards;
+  scale: 1;
+}
+
+@keyframes ball {
+  0% {
+    transform: translateX(-60%) translateY(-20%);
+
+    scale: 0;
+    animation-timing-function: linear;
+  }
+
+  50% {
+    transform: translateX(-10%) translateY(38%);
+    scale: 0.8;
+    animation-timing-function: cubic-bezier(0, 0.677, 0.312, 0.99);
+  }
+
+  100% {
+    transform: translateX(0) translateY(0);
+    scale: 1;
+  }
+}
+
+@keyframes landing {
+  from {
+    scale: 0;
+  }
+  to {
+    scale: 1;
+  }
+}
+
+.logo.reference {
+  opacity: 0.4;
+  scale: 1;
+}
+
+.landing {
+  animation: landing 0.1s cubic-bezier(0.075, 0.82, 0.165, 1) 0.8s forwards;
+  scale: 0;
+}
+
+.logo.ball {
+  animation: ball 0.5s 0.6s forwards;
+  scale: 0;
+  z-index: 1;
+}
+
+.reset {
+  animation: none !important;
+  scale: 0 !important;
+  opacity: 0 !important;
+  clip-path: none !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+@media screen and (pointer: fine) {
+  .logo-container.hover {
+    .b {
+      rotate: 4deg;
+      translate: -2% 2%;
+    }
+
+    .e1 {
+      rotate: -2deg;
+      translate: 1% 1%;
+      z-index: 4;
+    }
+
+    .n {
+      rotate: 3deg;
+      translate: -1% 2%;
+    }
+    .d {
+      rotate: 3deg;
+      translate: 0% -3%;
+    }
+    .e2 {
+      rotate: 2deg;
+      translate: 0% 0.2%;
+    }
+    .r {
+      rotate: -4deg;
+      translate: 2% 2%;
+    }
+    .ball {
+      translate: 3% -3%;
+    }
+  }
+
+  /* .logo-container.hover {
+    .ball {
+      opacity: 0;
+    }
+
+    .s1 {
+      opacity: 0;
+    }
+
+    .s2 {
+      opacity: 0;
+    }
+
+    .landing {
+      opacity: 0;
+    }
+
+    .b {
+      scale: -1 1;
+      rotate: 5deg;
+      translate: -10% 2%;
+    }
+
+    .e1 {
+      rotate: 32deg;
+      translate: -14% 22%;
+    }
+
+    .n {
+      rotate: -12.5deg;
+      translate: 6% -10%;
+    }
+    .d {
+      rotate: 2deg;
+      translate: 10.5% 10%;
+    }
+    .e2 {
+      rotate: 22deg;
+      translate: 25% -11%;
+    }
+    .r {
+      rotate: -4deg;
+      translate: 27% 11%;
+    }
+
+    .film{
+        opacity: 1;
+        transform: translateX(20%) translateY(20%);
+        transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    } 
+}*/
+}

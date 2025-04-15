@@ -1,0 +1,127 @@
+@keyframes bounceIn {
+  0% {
+    scale: 0;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+.title.dark{
+  color: white;
+}
+
+.title {
+  color: black;
+  font-size: clamp(35px, 7.5vw, 80px);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  user-select: none;
+  position: relative;
+}
+.placeholder {
+  opacity: 0;
+}
+
+.text {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  scale: 0;
+  user-select: none;
+}
+
+.text.a {
+  rotate: -20deg;
+  animation: bounceIn 0.5s
+    linear(
+      0,
+      0.162 3.6%,
+      1.018 12.8%,
+      1.235 18.4%,
+      1.219 22.4%,
+      1.005 32%,
+      0.944 38%,
+      1.013 57.2%,
+      1
+    )
+    0.2s forwards;
+}
+
+.text.b {
+  left: 14%;
+  rotate: -30deg;
+  top: -25%;
+  animation: bounceIn 0.5s
+    linear(
+      0,
+      0.162 3.6%,
+      1.018 12.8%,
+      1.235 18.4%,
+      1.219 22.4%,
+      1.005 32%,
+      0.944 38%,
+      1.013 57.2%,
+      1
+    )
+    0.3s forwards;
+}
+
+.text.o {
+  left: 30%;
+  rotate: 10deg;
+  bottom: -10%;
+  animation: bounceIn 0.5s
+    linear(
+      0,
+      0.162 3.6%,
+      1.018 12.8%,
+      1.235 18.4%,
+      1.219 22.4%,
+      1.005 32%,
+      0.944 38%,
+      1.013 57.2%,
+      1
+    )
+    0.4s forwards;
+}
+
+.text.u {
+  left: 45%;
+  rotate: 10deg;
+  top: -20%;
+  animation: bounceIn 0.5s
+    linear(
+      0,
+      0.162 3.6%,
+      1.018 12.8%,
+      1.235 18.4%,
+      1.219 22.4%,
+      1.005 32%,
+      0.944 38%,
+      1.013 57.2%,
+      1
+    )
+    0.5s forwards;
+}
+
+.text.t {
+  left: 65%;
+  rotate: 20deg;
+  bottom: -5%;
+  animation: bounceIn 0.5s
+    linear(
+      0,
+      0.162 3.6%,
+      1.018 12.8%,
+      1.235 18.4%,
+      1.219 22.4%,
+      1.005 32%,
+      0.944 38%,
+      1.013 57.2%,
+      1
+    )
+    0.6s forwards;
+}

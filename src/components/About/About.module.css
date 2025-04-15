@@ -1,0 +1,9 @@
+.about {
+  color: black;
+  max-width: 90%;
+  font-size: clamp(20px, 3cqw, 40px);
+}
+
+.about.dark {
+  color: white;
+}

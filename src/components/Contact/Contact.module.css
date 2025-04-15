@@ -1,0 +1,124 @@
+.contact {
+  color: black;
+}
+
+@media screen and (pointer: coarse){
+  .cta{
+    transition: 0.1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+}
+
+@media screen and (pointer: fine) {
+  .contact.dark {
+    color: white;
+
+    .cta:hover {
+      .hidden-email {
+        opacity: 1;
+      }
+      background-color: white;
+      color: black;
+  
+      .cta__char {
+        scale: 0.5;
+        color: white;
+      }
+    }
+  }
+
+  .cta:hover {
+    .hidden-email {
+      opacity: 1;
+
+    }
+    background-color: black;
+    color: white;
+
+    .cta__char {
+      scale: 0.5;
+      color: black;
+    }
+  }
+}
+
+.contact.dark {
+  color: white;
+  .cta {
+    color: white;
+    border: 4px solid white;
+  }
+  .cta:active{
+    background-color: white;
+    color: black;
+    transition: 0s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+}
+
+.hidden-email {
+  position: absolute;
+  font-size: clamp(25px, 5.5cqw, 80px);
+  z-index: 10;
+  opacity: 0;
+}
+
+@keyframes scaleIn {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+.cta {
+  cursor: pointer;
+  font-family: "Alte Haas Grotesk Bold";
+  padding: 5px clamp(10px, 3cqw, 40px);
+  font-size: clamp(35px, 7cqw, 100px);
+  background-color: transparent;
+  border: 4px solid black;
+  border-radius: 1000px;
+  scale: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  overflow: hidden;
+  transition: 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  animation: 0.5s scaleIn
+    linear(
+      0,
+      0.162 3.6%,
+      1.018 12.8%,
+      1.235 18.4%,
+      1.219 22.4%,
+      1.005 32%,
+      0.944 38%,
+      1.013 57.2%,
+      1
+    )
+    0.2s forwards;
+}
+
+.cta:active{
+  background-color: black;
+  color: white;
+}
+
+.cta__char {
+  user-select: none;
+  margin: 0;
+  transition: 0.8s
+    linear(
+      0,
+      0.162 3.6%,
+      1.018 12.8%,
+      1.235 18.4%,
+      1.219 22.4%,
+      1.005 32%,
+      0.944 38%,
+      1.013 57.2%,
+      1
+    );
+}

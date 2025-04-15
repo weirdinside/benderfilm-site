@@ -1,0 +1,161 @@
+@keyframes bounceIn {
+  0% {
+    scale: 0;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+.title.dark{
+  color: white;
+}
+
+.title {
+  color: black;
+  font-size: clamp(35px, 7.5vw, 80px);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  user-select: none;
+  position: relative;
+}
+
+.placeholder {
+  opacity: 0;
+}
+
+.text {
+  position: absolute;
+  margin: 0;
+  scale: 0;
+  padding: 0;
+  opacity: 1;
+  user-select: none;
+}
+
+.text.c1 {
+  rotate: 20deg;
+  animation: bounceIn 0.5s
+    linear(
+      0,
+      0.162 3.6%,
+      1.018 12.8%,
+      1.235 18.4%,
+      1.219 22.4%,
+      1.005 32%,
+      0.944 38%,
+      1.013 57.2%,
+      1
+    )
+    0.2s forwards;
+}
+.text.o {
+  bottom: -20%;
+  left: 14%;
+  rotate: 20deg;
+  animation: bounceIn 0.5s
+    linear(
+      0,
+      0.162 3.6%,
+      1.018 12.8%,
+      1.235 18.4%,
+      1.219 22.4%,
+      1.005 32%,
+      0.944 38%,
+      1.013 57.2%,
+      1
+    )
+    0.3s forwards;
+}
+.text.n {
+  left: 28%;
+  rotate: -12deg;
+  animation: bounceIn 0.5s
+    linear(
+      0,
+      0.162 3.6%,
+      1.018 12.8%,
+      1.235 18.4%,
+      1.219 22.4%,
+      1.005 32%,
+      0.944 38%,
+      1.013 57.2%,
+      1
+    )
+    0.4s forwards;
+}
+.text.t1 {
+  left: 47%;
+  rotate: 20deg;
+  bottom: -10%;
+  animation: bounceIn 0.5s
+    linear(
+      0,
+      0.162 3.6%,
+      1.018 12.8%,
+      1.235 18.4%,
+      1.219 22.4%,
+      1.005 32%,
+      0.944 38%,
+      1.013 57.2%,
+      1
+    )
+    0.5s forwards;
+}
+.text.a {
+  left: 54%;
+  rotate: -30deg;
+  bottom: -20%;
+  animation: bounceIn 0.5s
+    linear(
+      0,
+      0.162 3.6%,
+      1.018 12.8%,
+      1.235 18.4%,
+      1.219 22.4%,
+      1.005 32%,
+      0.944 38%,
+      1.013 57.2%,
+      1
+    )
+    0.6s forwards;
+}
+.text.c2 {
+  left: 70%;
+  top: -5%;
+  rotate: 16deg;
+  animation: bounceIn 0.5s
+    linear(
+      0,
+      0.162 3.6%,
+      1.018 12.8%,
+      1.235 18.4%,
+      1.219 22.4%,
+      1.005 32%,
+      0.944 38%,
+      1.013 57.2%,
+      1
+    )
+    0.7s forwards;
+}
+
+.text.t2 {
+  left: 85%;
+  rotate: 10deg;
+  bottom: -10%;
+  animation: bounceIn 0.5s
+    linear(
+      0,
+      0.162 3.6%,
+      1.018 12.8%,
+      1.235 18.4%,
+      1.219 22.4%,
+      1.005 32%,
+      0.944 38%,
+      1.013 57.2%,
+      1
+    )
+    0.8s forwards;
+}
