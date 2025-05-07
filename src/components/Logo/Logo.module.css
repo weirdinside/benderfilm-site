@@ -38,7 +38,6 @@
   position: relative;
   width: 100%;
   height: 100%;
-  cursor: pointer;
   clip-path: ellipse(44% 28% at 50% 50%);
   z-index: 30;
 }
@@ -50,7 +49,7 @@
   display: flex;
   max-width: 1000px;
   width: 100%;
-
+  overflow: hidden;
 }
 
 .logo {
@@ -137,6 +136,7 @@
 }
 
 .logo.e1 {
+  z-index: 10;
   animation: e1 0.5s
     linear(
       0,
@@ -176,6 +176,7 @@
 }
 
 .logo.n {
+  z-index: 10;
   animation: b 0.5s
     linear(
       0,
@@ -215,6 +216,7 @@
 }
 
 .logo.d {
+  z-index: 10;
   animation: b 0.5s
     linear(
       0,

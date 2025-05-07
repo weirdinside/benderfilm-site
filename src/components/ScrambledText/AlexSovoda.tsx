@@ -1,8 +1,8 @@
 import styles from "./AlexSovoda.module.css";
 
-export default function AlexSovoda() {
+export default function AlexSovoda({ active }: { active: boolean }) {
   return (
-    <h1 className={styles["title"]}>
+    <h1 className={`${styles["title"]} ${active && styles["active"]}`}>
       <div className={styles["placeholder"]}>Alex Sovoda</div>
       <p className={`${styles["text"]} ${styles["a1"]}`}>A</p>
       <p className={`${styles["text"]} ${styles["l"]}`}>l</p>

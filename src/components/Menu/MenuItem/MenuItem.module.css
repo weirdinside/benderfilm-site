@@ -29,7 +29,6 @@
   display: flex;
   margin: 0;
   width: max-content;
-  cursor: pointer;
   justify-content: center;
   align-items: center;
   font-family: "Alte Haas Grotesk BOld";
@@ -42,8 +41,6 @@
 .menu__item.dark {
   color: white;
 }
-
-
 
 .menu__char {
   user-select: none;

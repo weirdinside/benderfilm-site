@@ -7,9 +7,11 @@ import { ThemeContext } from "../../../contexts/ThemeProvider";
 export default function MenuItem({
   name,
   link,
+  setIsHovering
 }: {
   name: string;
   link: string;
+  setIsHovering: (arg0: boolean)=>void;
 }) {
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const { isDarkMode } = useContext(ThemeContext);
@@ -17,12 +19,15 @@ export default function MenuItem({
   return (
     <div
       onClick={() => {
+        setIsHovering(false);
         setIsHovered(false);
       }}
       onMouseOver={() => {
+        setIsHovering(true);
         setIsHovered(true);
       }}
       onMouseLeave={() => {
+        setIsHovering(false);
         setIsHovered(false);
       }}
       className={`${styles["menu__item"]} ${isDarkMode && styles['dark']}`}

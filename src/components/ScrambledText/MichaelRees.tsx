@@ -1,8 +1,8 @@
 import styles from "./MichaelRees.module.css";
 
-export default function MichaelRees() {
+export default function MichaelRees({active}: {active: boolean}) {
   return (
-    <h1 className={styles["title"]}>
+    <h1 className={`${styles["title"]} ${active && styles['active']}`}>
       <div className={styles["placeholder"]}>Michael Rees</div>
       <p className={`${styles["text"]} ${styles["m"]}`}>M</p>
       <p className={`${styles["text"]} ${styles["i"]}`}>i</p>

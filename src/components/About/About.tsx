@@ -2,7 +2,8 @@ import { useContext } from "react";
 import styles from "./About.module.css";
 import { ThemeContext } from "../../contexts/ThemeProvider";
 
-export default function About() {
+export default function About({setIsHovering}: {setIsHovering: (arg0: boolean) => void}) {
+  console.log(setIsHovering)
   const { isDarkMode } = useContext(ThemeContext);
 
   return (

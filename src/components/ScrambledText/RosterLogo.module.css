@@ -11,6 +11,57 @@
   .title.dark{
     color: white;
   }
+
+  .title:hover{
+    .text{
+      transition: 0.5s  linear(
+        0,
+        0.162 3.6%,
+        1.018 12.8%,
+        1.235 18.4%,
+        1.219 22.4%,
+        1.005 32%,
+        0.944 38%,
+        1.013 57.2%,
+        1
+      );
+    }
+
+    .text.r1 {
+      left: 0;
+      rotate: -4deg;
+    }
+    
+    .text.o {
+      left: 12%;
+      bottom: 0;
+      rotate: 0deg;
+
+    }
+    
+    .text.s {
+      left: 32%;
+      top: -1%;
+      rotate: -2deg;
+    }
+    
+    .text.t {
+      left: 52%;
+      rotate: 0deg;
+      bottom: -4%;
+    }
+    
+    .text.e {
+      left: 64%;
+      top: -8%;
+    }
+    
+    .text.r2 {
+      left: 84%;
+      rotate: 10deg;
+      bottom: -5%;
+    }
+  }
   
   .title {
     color: black;
@@ -31,8 +82,19 @@
     margin: 0;
     padding: 0;
     position: absolute;
-    cursor: pointer;
     user-select: none;
+    transition: 0.5s
+    linear(
+      0,
+      0.162 3.6%,
+      1.018 12.8%,
+      1.235 18.4%,
+      1.219 22.4%,
+      1.005 32%,
+      0.944 38%,
+      1.013 57.2%,
+      1
+    );
   }
   
   .text.r1 {

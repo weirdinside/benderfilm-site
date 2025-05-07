@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect, useContext } from "react";
+import { useContext, useRef, useState } from "react";
 import styles from "./Logo.module.css";
 
 import b from "/logo_layers/b.png";
@@ -14,8 +14,8 @@ import streak2 from "/logo_layers/streak2.png";
 
 import ball from "/logo_layers/ball.png";
 
-import film from "/logo_layers/film-text.png";
 import { ThemeContext } from "../../contexts/ThemeProvider";
+import film from "/logo_layers/film-text.png";
 
 export default function Logo() {
   const [isHovering, setIsHovering] = useState<boolean>(false);
@@ -24,15 +24,15 @@ export default function Logo() {
 
   const { isDarkMode } = useContext(ThemeContext);
 
-  const [noiseSeed, setNoiseSeed] = useState(0);
+  // const [noiseSeed, setNoiseSeed] = useState(0);
 
-  useEffect(() => {
-    const animationInterval = setInterval(() => {
-      setNoiseSeed((prevSeed) => (prevSeed + 1) % 100);
-    }, 10);
+  // useEffect(() => {
+  //   const animationInterval = setInterval(() => {
+  //     setNoiseSeed((prevSeed) => (prevSeed + 1) % 100);
+  //   }, 10);
 
-    return () => clearInterval(animationInterval);
-  }, []);
+  //   return () => clearInterval(animationInterval);
+  // }, []);
 
   function replayAnimation() {
     setAnimationKey((prev) => prev + 1);

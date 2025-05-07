@@ -8,7 +8,7 @@ import { ThemeProvider } from "./contexts/ThemeProvider.tsx";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ThemeProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/benderfilm-site/">
         <App />
       </BrowserRouter>
     </ThemeProvider>

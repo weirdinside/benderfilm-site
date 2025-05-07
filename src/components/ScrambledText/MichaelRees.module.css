@@ -58,13 +58,75 @@
   }
 }
 
+.title.active{
+  scale: 1.5;
+  .text.m {
+    rotate: -10deg;
+    left: 0%;
+  }
+  .text.i {
+    rotate: 10deg;
+    left: 14%;
+    top: -20%;
+  }
+  .text.c {
+    left: 18%;
+    bottom: -10%;
+    rotate: 20deg;
+  }
+  .text.h {
+    left: 24%;
+    top: -10%;
+    rotate: -20deg;
+  }
+  .text.a {
+    left: 36%;
+    rotate: 30deg;
+    bottom: -15%;
+  }
+  .text.e1 {
+    left: 40%;
+    rotate: -30deg;
+    top: -15%;
+  }
+  .text.l {
+    left: 50%;
+    rotate: 20deg;
+    top: 0%;
+  }
+  .text.r {
+    left: 61%;
+    rotate: -10deg;
+    top: 0%;
+  }
+  .text.e2 {
+    left: 71%;
+    rotate: -10deg;
+    top: -26%;
+  }
+
+  .text.e3 {
+    left: 78%;
+    rotate: 20deg;
+    bottom: -10%;
+  }
+
+  .text.s {
+    left: 85%;
+    rotate: -20deg;
+    top: -10%;
+  }
+}
+
 .title {
+  z-index: 10;
   font-family: "Alte Haas Grotesk";
   color: inherit;
-  font-size: clamp(35px, 4cqw, 80px);
+  font-size: clamp(35px, 4cqw, 64px);
   padding: 0;
   margin: 0;
   display: flex;
+  width: max-content;
   user-select: none;
   transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   position: relative;

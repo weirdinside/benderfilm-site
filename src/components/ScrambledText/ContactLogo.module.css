@@ -12,6 +12,64 @@
   color: white;
 }
 
+.title:hover{
+
+  .text{
+    transition: 0.5s
+    linear(
+      0,
+      0.162 3.6%,
+      1.018 12.8%,
+      1.235 18.4%,
+      1.219 22.4%,
+      1.005 32%,
+      0.944 38%,
+      1.013 57.2%,
+      1
+    );
+  }
+  .text.c1 {
+    rotate: 10deg;
+    
+  }
+  .text.o {
+    bottom: 0%;
+    left: 16%;
+    rotate: 0deg;
+
+  }
+  .text.n {
+    left: 32%;
+    rotate: -12deg;
+
+  }
+  .text.t1 {
+    left: 51%;
+    rotate: 10deg;
+    bottom: -0%;
+
+  }
+  .text.a {
+    left: 60%;
+    rotate: 3deg;
+    bottom: 10%;
+
+  }
+  .text.c2 {
+    left: 76%;
+    top: 5%;
+    rotate: 16deg;
+
+  }
+  
+  .text.t2 {
+    left: 89%;
+    rotate: -20deg;
+    bottom: 10%;
+
+  }
+}
+
 .title {
   color: black;
   font-size: clamp(35px, 7.5vw, 80px);
@@ -33,6 +91,18 @@
   padding: 0;
   opacity: 1;
   user-select: none;
+  transition: 0.5s
+    linear(
+      0,
+      0.162 3.6%,
+      1.018 12.8%,
+      1.235 18.4%,
+      1.219 22.4%,
+      1.005 32%,
+      0.944 38%,
+      1.013 57.2%,
+      1
+    );
 }
 
 .text.c1 {

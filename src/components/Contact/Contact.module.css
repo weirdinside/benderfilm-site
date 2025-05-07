@@ -56,7 +56,7 @@
 
 .hidden-email {
   position: absolute;
-  font-size: clamp(25px, 5.5cqw, 80px);
+  font-size: clamp(25px, 5.5cqw, 60px);
   z-index: 10;
   opacity: 0;
 }
@@ -71,10 +71,9 @@
 }
 
 .cta {
-  cursor: pointer;
   font-family: "Alte Haas Grotesk Bold";
   padding: 5px clamp(10px, 3cqw, 40px);
-  font-size: clamp(35px, 7cqw, 100px);
+  font-size: clamp(35px, 7cqw, 80px);
   background-color: transparent;
   border: 4px solid black;
   border-radius: 1000px;

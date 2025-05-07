@@ -4,14 +4,19 @@ import { ThemeContext } from "../../contexts/ThemeProvider";
 import { getRandomInt } from "../../utils/utils";
 import { Link } from "react-router-dom";
 
-export default function Contact() {
+export default function Contact({
+  setIsHovering,
+}: {
+  setIsHovering: (arg0: boolean) => void;
+}) {
   const [isHovered, setIsHovered] = useState<boolean>(false);
+  console.log(setIsHovering);
   const { isDarkMode } = useContext(ThemeContext);
 
   return (
     <div className={`${styles["contact"]} ${isDarkMode && styles["dark"]}`}>
       <Link
-      to={"mailto:kyle@benderfilm.com"}
+        to={"mailto:kyle@benderfilm.com"}
         onClick={() => {
           setIsHovered(false);
         }}

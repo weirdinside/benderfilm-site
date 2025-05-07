@@ -1,8 +1,8 @@
 import styles from "./MaddieGwinn.module.css";
 
-export default function MaddieGwinn() {
+export default function MaddieGwinn({active}: {active: boolean}) {
   return (
-    <h1 className={styles["title"]}>
+    <h1 className={`${styles["title"]} ${active && styles['active']}`}>
       <div className={styles["placeholder"]}>Maddie Gwinn</div>
       <p className={`${styles["text"]} ${styles["m"]}`}>M</p>
       <p className={`${styles["text"]} ${styles["a"]}`}>a</p>

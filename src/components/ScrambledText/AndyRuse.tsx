@@ -1,8 +1,8 @@
 import styles from "./AndyRuse.module.css";
 
-export default function AndyRuse() {
+export default function AndyRuse({active}: {active: boolean}) {
   return (
-    <h1 className={styles["title"]}>
+    <h1 className={`${styles["title"]} ${active && styles['active']}`}>
       <div className={styles["placeholder"]}>Andy Ruse</div>
       <p className={`${styles["text"]} ${styles["a"]}`}>A</p>
       <p className={`${styles["text"]} ${styles["n"]}`}>n</p>
