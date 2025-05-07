@@ -120,6 +120,7 @@ export default function Logo() {
         src={ball}
         alt="ball"
       />
+      <div className={styles['editorial']}>editorial</div>
     </div>
   );
 }

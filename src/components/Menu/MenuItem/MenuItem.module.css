@@ -60,16 +60,19 @@
 }
 
 @media screen and (pointer: fine) {
-  .float:hover {
-    scale: 1.1;
-    transition: 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
-    color: white;
-    background-color: black;
+  .menu__item:hover {
+    .float {
+      scale: 1.1;
+      transition: 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+      color: white;
+      background-color: black;
+    }
   }
 
-  .float.dark:hover{
-    color: black;
-    background-color: white;
-    
+  .menu__item.dark:hover {
+    .float {
+      color: black;
+      background-color: white;
+    }
   }
 }

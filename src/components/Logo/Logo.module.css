@@ -25,6 +25,40 @@
   filter: invert(1);
 }
 
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 100%;
+  }
+}
+
+.editorial{
+  position: absolute;
+  top: 40%;
+  font-size: clamp(20px, 4vw, 40px);
+  color: white;
+  right: 17.5%;
+  z-index: 5;
+  font-weight: 800;
+  opacity: 0;
+  rotate: 5deg;
+  animation: fadeIn 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) 1s forwards;
+  transition: 0.5s linear(
+    0,
+    0.162 3.6%,
+    1.018 12.8%,
+    1.235 18.4%,
+    1.219 22.4%,
+    1.005 32%,
+    0.944 38%,
+    1.013 57.2%,
+    1
+  );
+}
+
+
 .noise{
   z-index: 1;
   position: absolute;
@@ -450,6 +484,23 @@
     }
     .ball {
       translate: 3% -3%;
+    }
+
+    .editorial{
+      right: 15%;
+      top: 38%;
+      rotate: 10deg;
+      transition: 0.5s linear(
+        0,
+        0.162 3.6%,
+        1.018 12.8%,
+        1.235 18.4%,
+        1.219 22.4%,
+        1.005 32%,
+        0.944 38%,
+        1.013 57.2%,
+        1
+      );
     }
   }
 
