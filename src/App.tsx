@@ -15,6 +15,15 @@ function App() {
   const location = useLocation();
   const cursorRef = useRef<HTMLDivElement>(null);
   const [isHovering, setIsHovering] = useState<boolean>(false);
+  const [isCursorVisible, setCursorVisible] = useState<boolean>(true);
+
+  useEffect(()=>{
+    if(window.matchMedia('(pointer:coarse)').matches){
+      setCursorVisible(false);
+    } else {
+      setCursorVisible(true)
+    }
+  }, [])
 
   function handleCursorAnimation(e: MouseEvent) {
     if (cursorRef.current) {
@@ -73,13 +82,13 @@ function App() {
               return <MenuItem setIsHovering={setIsHovering} name={item.name} link={item.link} />;
             })}
         </header>
-        <div ref={cursorRef} className={`${styles["cursor"]} ${isHovering && styles['active']}`}>
+        <div ref={cursorRef} style={isCursorVisible ? {opacity: '1', scale: '1'} : {opacity: '0', scale: '1'}} className={`${styles["cursor"]} ${isHovering && styles['active']}`}>
           
         </div>
         <main className={styles["main"]}>
           <Routes>
             <Route path="*" element={<Logo />} />
-            <Route path="roster" element={<Roster setIsHovering={setIsHovering} />} />
+            <Route path="roster" element={<Roster setCursorVisible={setCursorVisible} setIsHovering={setIsHovering} />} />
             <Route path="about" element={<About setIsHovering={setIsHovering}  />} />
             <Route path="contact" element={<Contact setIsHovering={setIsHovering}  />} />
           </Routes>

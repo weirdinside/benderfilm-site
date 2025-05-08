@@ -17,6 +17,8 @@ import ball from "/logo_layers/ball.png";
 import { ThemeContext } from "../../contexts/ThemeProvider";
 import film from "/logo_layers/film-text.png";
 
+import editorial from '/logo_layers/editorial.png'
+
 export default function Logo() {
   const [isHovering, setIsHovering] = useState<boolean>(false);
   const [animationKey, setAnimationKey] = useState<number>(0);
@@ -104,6 +106,7 @@ export default function Logo() {
         src={film}
         alt="film"
       />
+      <img className={styles['editorial-img']} src={editorial} alt="editorial"/>
       <div
         ref={logoRef}
         onClick={replayAnimation}
@@ -120,7 +123,6 @@ export default function Logo() {
         src={ball}
         alt="ball"
       />
-      <div className={styles['editorial']}>editorial</div>
     </div>
   );
 }

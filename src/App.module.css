@@ -16,10 +16,12 @@
 @media screen and (pointer: coarse) {
   .cursor {
     display: none;
+    opacity: 0;
   }
 
-  .cursor.active{
+  .cursor.active {
     display: none;
+    opacity: 0;
   }
 }
 
@@ -27,9 +29,9 @@
   content: "➔";
 }
 
-.cursor.active::before{
+.cursor.active::before {
   content: "";
-  background-image: url('./assets/pointer.png');
+  background-image: url("./assets/pointer.png");
   background-position: center;
   height: 50px;
   min-width: 400px;
@@ -82,9 +84,9 @@
       1.013 57.2%,
       1
     );
-    background-repeat: no-repeat;
-    mix-blend-mode: normal;
-    transform: rotate(90deg)
+  background-repeat: no-repeat;
+  mix-blend-mode: normal;
+  transform: rotate(90deg);
 }
 
 .theme__toggle {
