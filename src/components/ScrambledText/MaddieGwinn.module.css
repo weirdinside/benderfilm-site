@@ -128,6 +128,8 @@
 
 .placeholder {
   opacity: 0;
+  width: max-content;
+
 }
 
 .text {

@@ -112,7 +112,6 @@
   width: max-content;
   position: relative;
   transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-
 }
 
 .placeholder {

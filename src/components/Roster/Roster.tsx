@@ -19,33 +19,29 @@ export default function Roster({
   const [activeName, setActiveName] = useState<Name>("");
 
   const isPointerCoarse = window.matchMedia("(pointer:coarse)").matches;
-
-  function toggleActiveName(name: Name) {
-    setActiveName(prev => (prev === name ? "" : name));
-  }
-
+  
   const isActive = (name: Name) => activeName === name || activeName === "";
 
   const people = [
     {
       name: "Michael",
       Component: MichaelRees,
-      reel: ""
+      reel: "https://vimeo.com/56547394",
     },
     {
       name: "Alex",
       Component: AlexSovoda,
-      reel: ""
+      reel: "https://vimeo.com/56547394",
     },
     {
       name: "Maddie",
       Component: MaddieGwinn,
-      reel: ""
+      reel: "https://vimeo.com/56547394",
     },
     {
       name: "Andy",
       Component: AndyRuse,
-      reel: ""
+      reel: "https://vimeo.com/56547394",
     },
   ] as const;
 
@@ -56,18 +52,46 @@ export default function Roster({
       }`}
     >
       <div className={styles["list"]}>
-        {people.map(({ name, Component }) => (
+        {people.map(({ name, Component, reel }) => (
           <div
             key={name}
-            className={`${styles["name"]} ${!isActive(name) && styles["hidden"]}`}
+            className={`${styles["name"]} ${
+              !isActive(name) && styles["hidden"]
+            }`}
           >
             <div
-              onMouseEnter={() => setIsHovering(true)}
-              onMouseLeave={() => setIsHovering(false)}
-              onClick={() => toggleActiveName(name)}
+              onMouseEnter={() => {
+                if (activeName === "") setIsHovering(true);
+              }}
+              onMouseLeave={() => {
+                if (activeName === "") setIsHovering(false);
+              }}
+              onClick={() => {
+                if (activeName === "") {
+                  setIsHovering(false);
+                  setActiveName(name);
+                }
+              }}
               className={styles["name__title"]}
             >
               <Component active={activeName === name} />
+              <div
+                onClick={() => {
+                  console.log(activeName);
+                  setActiveName("");
+                }}
+                onMouseEnter={() => {
+                  setIsHovering(true);
+                }}
+                onMouseLeave={() => {
+                  setIsHovering(false);
+                }}
+                className={`${styles["close"]} ${
+                  activeName === name && styles["visible"]
+                }`}
+              >
+                ✕
+              </div>
             </div>
 
             <div
@@ -84,21 +108,25 @@ export default function Roster({
                   onMouseDown={() => setCursorVisible(false)}
                   style={{ padding: "56.25% 0 0 0", position: "relative" }}
                 >
-                  <iframe
-                    src="https://player.vimeo.com/video/56547394?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                    style={{
-                      zIndex: "2",
-                      border: "0px",
-                      position: "absolute",
-                      top: "0",
-                      cursor: "none",
-                      left: "0",
-                      width: "100%",
-                      height: "100%",
-                    }}
-                    title="Timelapse"
-                  ></iframe>
+                  {activeName === name && (
+                    <iframe
+                      src={`https://player.vimeo.com/video/${reel.match(
+                        /\d+/
+                      )}?badge=0&amp;autopause=0&amp`}
+                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                      style={{
+                        zIndex: "2",
+                        border: "0px",
+                        position: "absolute",
+                        top: "0",
+                        cursor: "none",
+                        left: "0",
+                        width: "100%",
+                        height: "100%",
+                      }}
+                      title="Timelapse"
+                    />
+                  )}
                 </div>
                 <script src="https://player.vimeo.com/api/player.js"></script>
               </div>
@@ -109,8 +137,7 @@ export default function Roster({
                 <span style={{ fontWeight: "800" }}>
                   Smoking weed, Turning Up,
                 </span>{" "}
-                and{" "}
-                <span style={{ fontWeight: "800" }}>Getting Mad High.</span>{" "}
+                and <span style={{ fontWeight: "800" }}>Getting Mad High.</span>{" "}
                 To work with them, please contact kyle@benderfilm.com
               </div>
             </div>

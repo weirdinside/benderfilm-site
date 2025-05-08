@@ -126,13 +126,15 @@
   padding: 0;
   margin: 0;
   display: flex;
-  width: max-content;
   user-select: none;
-  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  width: max-content;
   position: relative;
+  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .placeholder {
+  width: max-content;
+
   opacity: 0;
 }
 
