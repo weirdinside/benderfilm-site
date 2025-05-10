@@ -1,122 +1,4 @@
-.title:hover {
-  scale: 1.3;
-  .text.m {
-    rotate: -10deg;
-    left: 0%;
-  }
-  .text.i {
-    rotate: 10deg;
-    left: 14%;
-    top: -20%;
-  }
-  .text.c {
-    left: 18%;
-    bottom: -10%;
-    rotate: 20deg;
-  }
-  .text.h {
-    left: 24%;
-    top: -10%;
-    rotate: -20deg;
-  }
-  .text.a {
-    left: 36%;
-    rotate: 30deg;
-    bottom: -15%;
-  }
-  .text.e1 {
-    left: 40%;
-    rotate: -30deg;
-    top: -15%;
-  }
-  .text.l {
-    left: 50%;
-    rotate: 20deg;
-    top: 0%;
-  }
-  .text.r {
-    left: 61%;
-    rotate: -10deg;
-    top: 0%;
-  }
-  .text.e2 {
-    left: 71%;
-    rotate: -10deg;
-    top: -26%;
-  }
 
-  .text.e3 {
-    left: 78%;
-    rotate: 20deg;
-    bottom: -10%;
-  }
-
-  .text.s {
-    left: 85%;
-    rotate: -20deg;
-    top: -10%;
-  }
-}
-
-.title.active{
-  scale: 1.5;
-  .text.m {
-    rotate: -10deg;
-    left: 0%;
-  }
-  .text.i {
-    rotate: 10deg;
-    left: 14%;
-    top: -20%;
-  }
-  .text.c {
-    left: 18%;
-    bottom: -10%;
-    rotate: 20deg;
-  }
-  .text.h {
-    left: 24%;
-    top: -10%;
-    rotate: -20deg;
-  }
-  .text.a {
-    left: 36%;
-    rotate: 30deg;
-    bottom: -15%;
-  }
-  .text.e1 {
-    left: 40%;
-    rotate: -30deg;
-    top: -15%;
-  }
-  .text.l {
-    left: 50%;
-    rotate: 20deg;
-    top: 0%;
-  }
-  .text.r {
-    left: 61%;
-    rotate: -10deg;
-    top: 0%;
-  }
-  .text.e2 {
-    left: 71%;
-    rotate: -10deg;
-    top: -26%;
-  }
-
-  .text.e3 {
-    left: 78%;
-    rotate: 20deg;
-    bottom: -10%;
-  }
-
-  .text.s {
-    left: 85%;
-    rotate: -20deg;
-    top: -10%;
-  }
-}
 
 .title {
   z-index: 10;
@@ -220,4 +102,134 @@
   left: 82%;
   rotate: 0deg;
   top: 0%;
+}
+
+
+.title.active {
+  scale: 1.5;
+  .text.m {
+    rotate: -10deg;
+    left: 0%;
+  }
+  .text.i {
+    rotate: 10deg;
+    left: 14%;
+    top: -20%;
+  }
+  .text.c {
+    left: 18%;
+    bottom: -10%;
+    rotate: 20deg;
+  }
+  .text.h {
+    left: 24%;
+    top: -10%;
+    rotate: -20deg;
+  }
+  .text.a {
+    left: 36%;
+    rotate: 30deg;
+    bottom: -15%;
+  }
+  .text.e1 {
+    left: 40%;
+    rotate: -30deg;
+    top: -15%;
+  }
+  .text.l {
+    left: 50%;
+    rotate: 20deg;
+    top: 0%;
+  }
+  .text.r {
+    left: 61%;
+    rotate: -10deg;
+    top: 0%;
+  }
+  .text.e2 {
+    left: 71%;
+    rotate: -10deg;
+    top: -26%;
+  }
+
+  .text.e3 {
+    left: 78%;
+    rotate: 20deg;
+    bottom: -10%;
+  }
+
+  .text.s {
+    left: 85%;
+    rotate: -20deg;
+    top: -10%;
+  }
+}
+
+@media screen and (pointer: coarse){
+  .title.active{
+    scale: 1.1;
+  }
+}
+
+
+@media screen and (pointer: fine) {
+  .title:hover {
+    scale: 1.3;
+    .text.m {
+      rotate: -10deg;
+      left: 0%;
+    }
+    .text.i {
+      rotate: 10deg;
+      left: 14%;
+      top: -20%;
+    }
+    .text.c {
+      left: 18%;
+      bottom: -10%;
+      rotate: 20deg;
+    }
+    .text.h {
+      left: 24%;
+      top: -10%;
+      rotate: -20deg;
+    }
+    .text.a {
+      left: 36%;
+      rotate: 30deg;
+      bottom: -15%;
+    }
+    .text.e1 {
+      left: 40%;
+      rotate: -30deg;
+      top: -15%;
+    }
+    .text.l {
+      left: 50%;
+      rotate: 20deg;
+      top: 0%;
+    }
+    .text.r {
+      left: 61%;
+      rotate: -10deg;
+      top: 0%;
+    }
+    .text.e2 {
+      left: 71%;
+      rotate: -10deg;
+      top: -26%;
+    }
+
+    .text.e3 {
+      left: 78%;
+      rotate: 20deg;
+      bottom: -10%;
+    }
+
+    .text.s {
+      left: 85%;
+      rotate: -20deg;
+      top: -10%;
+    }
+  }
 }
